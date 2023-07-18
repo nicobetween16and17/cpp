@@ -3,30 +3,30 @@
 Fixed::Fixed(void)
 {
 	this->_value = 0;
-	std::cout << "Default constructor was called\n";
+	//std::cout << "Default constructor was called\n";
 }
 
 Fixed::Fixed(const int n)
 {
 	this->_value = n << this->_bit;
-	std::cout << "Int constructor was called\n";
+	//std::cout << "Int constructor was called\n";
 }
 
 Fixed::Fixed(const float n)
 {
 	this->_value = std::round(n * (1 << this->_bit));
-	std::cout << "Float constructor was called\n";
+	//std::cout << "Float constructor was called\n";
 }
 
 Fixed::Fixed(const Fixed &f)
 {
-	std::cout << "Copy constructor was called\n";
+	//std::cout << "Copy constructor was called\n";
 	this->_value = f._value;
 }
 
 Fixed Fixed::operator=(Fixed const &f)
 {
-	std::cout << "Copy assignment operator was called\n";
+	//std::cout << "Copy assignment operator was called\n";
 	if (this != &f)
 		this->_value = f.getRawBits();
 	return *this;
@@ -123,7 +123,7 @@ const Fixed& Fixed::max(const Fixed &f1, const Fixed &f2)
 }
 Fixed::~Fixed()
 {
-	std::cout << "Destructor was called\n";
+	//std::cout << "Destructor was called\n";
 }
 
 int Fixed::getRawBits( void ) const
