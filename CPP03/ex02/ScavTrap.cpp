@@ -7,6 +7,7 @@ ScavTrap::ScavTrap(void)
 	this->setEnergyPoint(50);
 	this->setAttackDamage(20);
 }
+ScavTrap::~ScavTrap(){std::cout<< this->getName() << " is destroyed\n";}
 ScavTrap::ScavTrap(std::string name)
 {
 	this->setName(name);
