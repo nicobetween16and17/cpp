@@ -5,11 +5,11 @@
 
 class Dog: public Animal{
 private:
-	;
 public:
 	void makeSound(void) const;
 	std::string getType(void) const;
 	~Dog();
+	Dog();
 };
 
 #endif
